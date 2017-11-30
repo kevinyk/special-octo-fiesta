@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h3>Welcome Home</h3>
+<% for(var i = 0; i<allUsers.length; i++){ %>
+	<p><%= allUsers[i].name %></p>
+<% } %>
+<h2>Write a message:</h2>
+<form method="POST" action="/messages">
+	Content: <p><input type="text" name="content"></p>
+	<input type="submit" name="">
+</form>
+<h3>You wrote this previously:</h3>
+<%= theMessage.content %>
+</body>
+</html>
